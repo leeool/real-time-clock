@@ -12,7 +12,7 @@ const getHours = () => {
   s <= 9 ? s = `0${s}` : null
   m <= 9 ? m = `0${m}` : null
   h <= 9 ? h = `0${h}` : null
-
+  
   return { h, m, s }
 }
 
@@ -46,7 +46,7 @@ const mode12Hours = () => {
 }
 
 const showTurn = (h) => {
-  h >= 0 && h <= 12 ? turn.textContent = "am" : turn.textContent = "pm"
+  getHours().h >= 0 && getHours().h <= 12 ? turn.textContent = "am" : turn.textContent = "pm"
 }
 
 changeMode.addEventListener("click", () => {
